@@ -1,0 +1,25 @@
+name: Validate Design Artifact
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "artifact/**"
+      - ".github/workflows/**"
+
+  push:
+    branches:
+      - main
+    paths:
+      - "artifact/**"
+      - ".github/workflows/**"
+
+jobs:
+  validate:
+    name: Validate artifact
+    uses: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/architecture-governance-actions/.github/workflows/validate-design-artifact.yml@main
+    with:
+      artifact_path: "artifact/exchange"
+      repository_name_pattern: "^(SBB-(SD|AM|BS)-[0-9]{4}|BS-[0-9]{4})$"
+      require_xml: true

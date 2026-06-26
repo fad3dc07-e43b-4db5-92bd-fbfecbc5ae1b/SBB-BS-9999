@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/design-governance-report.schema.json",
+  "title": "Design Governance Report",
+  "type": "object",
+  "required": ["repo", "summary", "exchange"],
+  "properties": {
+    "repo": {
+      "type": "object",
+      "required": ["name", "status", "sources_analyzed", "sources"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "status": {
+          "type": "string",
+          "enum": ["PASS", "WARN", "FAIL", "UNKNOWN"]
+        },
+        "sources_analyzed": { "type": "integer", "minimum": 0 },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["path", "detected_type", "status", "checks", "observations"],
+            "properties": {
+              "path": { "type": "string", "minLength": 1 },
+              "detected_type": {
+                "type": "string",
+                "enum": [
+                  "archimate-open-exchange",
+                  "drawio",
+                  "bizzdesign",
+                  "markdown",
+                  "unknown"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": ["PASS", "WARN", "FAIL", "SKIP", "UNKNOWN"]
+              },
+              "checks": {
+                "type": "object",
+                "required": ["exists", "non_empty", "well_formed", "type_specific"],
+                "properties": {
+                  "exists": { "$ref": "#/$defs/checkStatus" },
+                  "non_empty": { "$ref": "#/$defs/checkStatus" },
+                  "well_formed": { "$ref": "#/$defs/checkStatus" },
+                  "type_specific": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": ["name", "status"],
+                      "properties": {
+                        "name": { "type": "string", "minLength": 1 },
+                        "status": { "$ref": "#/$defs/checkStatus" },
+                        "detail": { "type": "string" }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              "observations": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": ["pass", "warn", "fail", "skip", "unknown"],
+      "properties": {
+        "pass": { "type": "integer", "minimum": 0 },
+        "warn": { "type": "integer", "minimum": 0 },
+        "fail": { "type": "integer", "minimum": 0 },
+        "skip": { "type": "integer", "minimum": 0 },
+        "unknown": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "exchange": {
+      "type": "object",
+      "required": ["path", "status"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "status": {
+          "type": "string",
+          "enum": ["PASS", "WARN", "FAIL", "UNKNOWN"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "overall_observations": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "checkStatus": {
+      "type": "string",
+      "enum": ["PASS", "FAIL", "SKIP", "UNKNOWN"]
+    }
+  }
+}
