@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Agile Manifesto" id="96d80788-74ee-4d23-86b6-1d632d7d9474" version="5.0.0">
   <folder name="Strategy" id="7f387aef-bf59-4675-852f-a7565a4a6acc" type="strategy"/>
   <folder name="Business" id="7beb4b89-5179-4fce-9629-52d67266d3e6" type="business">
