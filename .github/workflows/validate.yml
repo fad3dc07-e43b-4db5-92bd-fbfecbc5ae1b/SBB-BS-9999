@@ -16,10 +16,10 @@ on:
       - ".github/workflows/**"
 
 jobs:
-  validate:
-    name: Validate artifact
-    uses: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/ci-architecture-governance/.github/workflows/validate-design-artifact.yml@main
-    with:
-      artifact_path: "artifact/exchange"
-      repository_name_pattern: "^(SBB-(SD|AM|BS)-[0-9]{4}|BS-[0-9]{4})$"
-      require_xml: true
+  validate-structure:
+    name: Validate repository structure
+    uses: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/ci-architecture-governance/.github/workflows/validate-repository-structure.yml@main
+
+  validate-source:
+    name: Validate source document
+    uses: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/ci-architecture-governance/.github/workflows/validate-archimate-source.yml@main

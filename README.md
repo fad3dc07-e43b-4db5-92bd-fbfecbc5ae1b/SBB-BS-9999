@@ -10,8 +10,9 @@ Este repositorio representa un activo arquitectónico gobernado.
 - `artifact/exchange/` aloja el artefacto de intercambio versionado.
 - El artefacto actual vive en `artifact/exchange/design.openexchange.xml`.
 - El contrato del reporte de gobierno vive en `.github/governance/design-governance-report.schema.json`.
-- La validación se ejecuta mediante un workflow centralizado de gobierno.
-- La primera validación esperada es mínima: nombre estándar del repositorio, existencia del artefacto y XML bien formado.
+- La validación se ejecuta mediante workflows centralizados de gobierno.
+- Una validación cubre la coherencia estructural del repositorio y los nombres estándar.
+- La otra valida que `artifact/source/` contenga un documento ArchiMate aceptable.
 - Futuras versiones podrán agregar validaciones de metamodelo, reglas de arquitectura, trazabilidad, semántica, owners, dominios y versionado por tags.
 
 Estructura mínima esperada:
