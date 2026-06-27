@@ -20,8 +20,8 @@ jobs:
     name: Validate manifest
     uses: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/ci-architecture-governance/.github/workflows/validate.yml@main
 
-  report:
-    name: Report validation results
+  publish-report:
+    name: Publish validation report
     needs:
       - validate
     if: always()
