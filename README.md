@@ -9,7 +9,7 @@ Este repositorio representa un activo arquitectónico gobernado.
 - `artifact/source/` aloja la fuente editable del diseño o un ejemplo de trabajo.
 - `artifact/exchange/` aloja el artefacto de intercambio versionado.
 - El artefacto actual vive en `artifact/exchange/design.openexchange.xml`.
-- El contrato del reporte de gobierno vive en `.github/governance/design-governance-report.schema.json`.
+- El contrato del reporte de gobierno vive en el repo central `ci-architecture-governance`.
 - La validación se ejecuta mediante workflows centralizados de gobierno.
 - Una validación cubre la coherencia estructural del repositorio y los nombres estándar.
 - La otra valida que `artifact/source/` contenga un documento ArchiMate aceptable.

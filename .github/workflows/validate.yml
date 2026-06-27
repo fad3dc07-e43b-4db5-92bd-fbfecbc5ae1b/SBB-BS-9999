@@ -32,37 +32,17 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout governance scripts
+        uses: actions/checkout@v4
+        with:
+          repository: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/ci-architecture-governance
+          path: governance
+
       - name: Print consolidated report
         shell: bash
         run: |
-          python - <<'PY'
-          import json
-          import os
-          import sys
-          from pathlib import Path
-
-          structure = json.loads(os.environ["STRUCTURE_REPORT"])
-          source = json.loads(os.environ["SOURCE_REPORT"])
-
-          lines = []
-          lines.append("| Check | Status |")
-          lines.append("|---|---|")
-          lines.append(f"| Repository structure | `{structure['status']}` |")
-          lines.append(f"| Archimate source | `{source['status']}` |")
-          lines.append("")
-          lines.append(f"- Structure: `{structure['status']}`")
-          for item in structure.get("observations", []):
-              lines.append(f"  - {item}")
-          lines.append(f"- Source: `{source['status']}`")
-          for item in source.get("observations", []):
-              lines.append(f"  - {item}")
-
-          summary_path = Path(os.environ.get("GITHUB_STEP_SUMMARY", "/tmp/step-summary.md"))
-          summary_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
-
-          if structure["status"] != "PASS" or source["status"] != "PASS":
-              sys.exit(1)
-          PY
+          status="$(STRUCTURE_REPORT="$STRUCTURE_REPORT" SOURCE_REPORT="$SOURCE_REPORT" node governance/scripts/render-validation-report.mjs)"
+          if [ "$status" != "PASS" ]; then exit 1; fi
         env:
           STRUCTURE_REPORT: ${{ needs.validate-structure.outputs.report }}
           SOURCE_REPORT: ${{ needs.validate-source.outputs.report }}
