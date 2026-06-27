@@ -22,7 +22,7 @@ jobs:
 
   validate-source:
     name: Validate source document
-    uses: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/ci-architecture-governance/.github/workflows/validate-archimate-source.yml@main
+    uses: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/ci-architecture-governance/.github/workflows/validate-archi-archimate-source.yml@main
 
   report:
     name: Report validation results
