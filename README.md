@@ -11,7 +11,7 @@ Este repositorio representa un activo arquitectónico gobernado.
 - El artefacto actual vive en `artifact/exchange/design.openexchange.xml`.
 - La validación se ejecuta mediante un engine declarativo centralizado en `ci-architecture-governance`.
 - El repositorio de gobierno publica un manifest de reglas y el repo de diseño solo lo consume.
-- Las reglas cubren la coherencia estructural del repositorio y la compatibilidad Archi/ArchiMate.
+- La regla activa cubre la compatibilidad Archi/ArchiMate de `artifact/source/design.archimate`.
 - Futuras versiones podrán agregar validaciones de metamodelo, reglas de arquitectura, trazabilidad, semántica, owners, dominios y versionado por tags.
 
 Estructura mínima esperada:
