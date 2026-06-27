@@ -1,4 +1,4 @@
-name: CI Aplicación
+name: Continuous Architecture CI
 
 on:
   pull_request:
