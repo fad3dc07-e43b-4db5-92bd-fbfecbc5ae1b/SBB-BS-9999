@@ -36,7 +36,7 @@ jobs:
       - name: Print consolidated report
         shell: bash
         run: |
-          status="$(VALIDATION_REPORT="$VALIDATION_REPORT" node governance/report.mjs)"
+          status="$(VALIDATION_REPORT="$VALIDATION_REPORT" node governance/publish-report.mjs)"
           if [ "$status" != "PASS" ]; then exit 1; fi
         env:
           VALIDATION_REPORT: ${{ needs.validate.outputs.report }}
