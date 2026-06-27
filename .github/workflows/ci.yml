@@ -18,4 +18,4 @@ on:
 jobs:
   execute_rules:
     name: Validar cumplimiento
-    uses: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/ci-architecture-governance/.github/workflows/compliance.yml@main
+    uses: fad3dc07-e43b-4db5-92bd-fbfecbc5ae1b/ContinuousArchitectureWorkflow/.github/workflows/compliance.yml@main
