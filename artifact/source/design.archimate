@@ -193,6 +193,8 @@
     <element xsi:type="archimate:AssociationRelationship" id="860d4e22-68f0-4849-aaf2-3258779f2292" source="dba42491-792f-456b-9402-b34258f78726" target="c89d36f0-01e3-41ae-b634-8cbe5dd08778"/>
   </folder>
   <folder name="Views" id="94fcbd37-6ade-486a-a526-843bab1640ea" type="diagrams">
+    <folder name="AS-IS" id="0d7f6f38-9f88-4d48-b4cb-7d0a05d6d6fd" type="diagrams"/>
+    <folder name="TO-BE" id="0f5c0a4f-6ec5-4d13-8b62-99dd4d8a3d86" type="diagrams"/>
     <element xsi:type="archimate:ArchimateDiagramModel" name="Default View" id="86cb72bd-4ddf-4a16-8a4f-e4afa8ea24ca">
       <child xsi:type="archimate:DiagramModelReference" id="9886e1e2-d5e2-46c5-b6eb-23e1e7696562" targetConnections="d1065952-b912-4cbd-910b-26ffea56e93c" textPosition="1" model="ca2871ba-f3a4-42da-bd8e-9ec5155ea620">
         <bounds x="122" y="240" width="155" height="55"/>
