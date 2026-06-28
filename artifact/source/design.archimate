@@ -556,4 +556,5 @@
       </child>
     </element>
   </folder>
+  <!-- trigger workflow -->
 </archimate:model>
