@@ -18,4 +18,4 @@ on:
 jobs:
   execute_rules:
     name: Validar cumplimiento
-    uses: ContinuousArchitecture/ContinuousArchitectureWorkflow/.github/workflows/compliance.yml@main
+    uses: ContinuousArchitecture/CALinter/.github/workflows/compliance.yml@main
