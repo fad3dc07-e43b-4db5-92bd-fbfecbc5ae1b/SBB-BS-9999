@@ -1,5 +1,5 @@
 name: CI
-# harmless comment to trigger workflow
+# trigger workflow for real Github test
 
 on:
   pull_request:
