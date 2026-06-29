@@ -1,6 +1,6 @@
 name: CI
 # trigger workflow for real Github test
-# keep this path filter to validate CALinter on GitHub (summary refresh v17)
+# keep this path filter to validate CALinter on GitHub (summary refresh v18)
 
 on:
   pull_request:
