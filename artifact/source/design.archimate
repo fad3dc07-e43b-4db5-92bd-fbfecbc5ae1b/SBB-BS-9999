@@ -72,7 +72,7 @@
     <element xsi:type="archimate:Driver" name="Simplicity" id="aafb861b-df6d-4a96-a7b6-c70ca4e8d832"/>
     <element xsi:type="archimate:Driver" name="Unnecessary work not done" id="12bc4173-cc2f-4619-a95b-989682122548"/>
     <element xsi:type="archimate:Driver" name="Necessary work done" id="dd1cdacf-7e87-44f0-af3d-a27c1ccbc9ff"/>
-    <element xsi:type="archimate:Driver" name="Best  Architecture, Requirements  and Design" id="f46e5a7e-0a4d-4fad-8e50-b803387fc77e"/>
+    <element xsi:type="archimate:Driver" name="Best Architecture, Requirements and Design" id="f46e5a7e-0a4d-4fad-8e50-b803387fc77e"/>
     <element xsi:type="archimate:Requirement" name="Self-organizing teams" id="78f60606-2112-4331-a744-3d18ff90fcc8"/>
     <element xsi:type="archimate:Driver" name="More Effective Team" id="dba42491-792f-456b-9402-b34258f78726"/>
     <element xsi:type="archimate:Requirement" name="Regular tuning and adjustment of behavior" id="bacb4850-a689-445d-bf80-7bd9598df48c"/>
