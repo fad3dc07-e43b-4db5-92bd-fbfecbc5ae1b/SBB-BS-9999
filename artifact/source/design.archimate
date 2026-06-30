@@ -40,7 +40,7 @@
     <element xsi:type="archimate:Driver" name="Customer satisfaction" id="7350668e-c640-48d9-8d52-77190b0d1b96"/>
     <element xsi:type="archimate:Driver" name="Early delivery" id="c436b32c-6527-4fdc-ad31-ea317cd472fe"/>
     <element xsi:type="archimate:Driver" name="Continuous delivery" id="f2bbf020-b54d-4c28-81c3-1ef1b0625389"/>
-    <element xsi:type="archimate:Meaning" name="It is all about priority" id="71b4a705-4c22-460e-8044-6d9c0c0f9bd0"/>
+    <element xsi:type="archimate:Meaning" name="Priority matters" id="71b4a705-4c22-460e-8044-6d9c0c0f9bd0"/>
     <element xsi:type="archimate:Driver" name="Customer competitive advantage" id="fd8fcb81-ee0e-40aa-9a73-d18b5cfa1f8f"/>
     <element xsi:type="archimate:Driver" name="Agile Processes harnessing the change" id="6e338cc0-6403-44c2-83de-748d108a6ada"/>
     <element xsi:type="archimate:Driver" name="Welcoming changing requirements" id="df0ac801-07bb-40c8-ade0-cfe216812dbe"/>
