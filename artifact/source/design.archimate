@@ -9,7 +9,7 @@
     <element xsi:type="archimate:BusinessFunction" name="Software development" id="09297a62-c2e3-46c3-8f4a-8ead8625a466"/>
     <element xsi:type="archimate:BusinessRole" name="Software programmers" id="1a57452c-7c95-402a-bf1b-e2c4a710acea"/>
     <element xsi:type="archimate:BusinessActor" name="Individuals" id="8b416a69-dabb-4f5e-9a7e-4b55b65ced03"/>
-    <element xsi:type="archimate:BusinessInteraction" name="interactions " id="a1b39a05-8e32-4f67-869b-5b208381b5ec"/>
+    <element xsi:type="archimate:BusinessInteraction" name="Interactions" id="a1b39a05-8e32-4f67-869b-5b208381b5ec"/>
     <element xsi:type="archimate:BusinessCollaboration" name="Customer collaboration" id="9c00c2d0-115d-47c8-9f02-99730f6d4158"/>
     <element xsi:type="archimate:BusinessProcess" name="Responding to change" id="a9450b04-e885-47b3-addf-079d7766475e"/>
     <element xsi:type="archimate:BusinessProcess" name="Processes" id="80c31b9b-f474-49f0-9588-4c9d68136240"/>
